@@ -1,0 +1,26 @@
+ACCEPT cust_id PROMPT 'Enter Customer ID: '
+ACCEPT start_date PROMPT 'Enter Start Date (YYYY-MM-DD): '
+ACCEPT end_date PROMPT 'Enter End Date (YYYY-MM-DD): '
+
+COLUMN booking_id FORMAT A10 HEADING 'Booking ID'
+COLUMN booking_date FORMAT A15 HEADING 'Booking Date'
+COLUMN departure_airport FORMAT A20 HEADING 'Departure Airport'
+COLUMN departure_date FORMAT A15 HEADING 'Departure Date'
+COLUMN arrival_airport FORMAT A20 HEADING 'Arrival Airport'
+
+TTITLE CENTER 'Booking History for Customer: &cust_id' SKIP 1
+
+BREAK ON booking_id SKIP 1
+
+SELECT b.booking_id AS "Booking ID",
+       TO_CHAR(b.booking_date, 'DD-MON-YYYY') AS "Booking Date",
+       da.name AS "Departure Airport",
+       TO_CHAR(f.departure_time, 'DD-MON-YYYY HH24:MI') AS "Departure Date",
+       aa.name AS "Arrival Airport"
+FROM booking b
+JOIN customer c ON b.customer_id = c.customer_id
+JOIN flight f ON b.flight_id = f.flight_id
+JOIN airport da ON f.departure_airport_id = da.airport_id
+JOIN airport aa ON f.arrival_airport_id = aa.airport_id
+WHERE b.customer_id = '&cust_id'
+AND b.booking_date BETWEEN TO_DATE('&start_date', 'YYYY-MM-DD') AND TO_DATE('&end_date', 'YYYY-MM-DD');

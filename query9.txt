@@ -1,0 +1,24 @@
+ACCEPT start_date PROMPT 'Enter Start Date (YYYY-MM-DD): '
+ACCEPT end_date PROMPT 'Enter End Date (YYYY-MM-DD): '
+ACCEPT pilot_id PROMPT 'Enter Pilot ID: '
+
+COLUMN destination_city FORMAT A25 HEADING 'Destination City'
+COLUMN aircraft_used FORMAT A21 HEADING 'Aircraft Used'
+COLUMN num_flights FORMAT 9999 HEADING 'Number of Flights'
+COLUMN total_revenue FORMAT $999,999.99 HEADING 'Total Revenue'
+
+TTITLE CENTER 'Pilot Travel Details' SKIP 1
+
+SELECT a.city AS destination_city,
+       ac.aircraft_name || ' ' || ac.model AS aircraft_used,
+       COUNT(*) AS num_flights,
+       SUM(p.amount) AS total_revenue
+FROM pilot_schedule ps
+JOIN flight f ON ps.flight_id = f.flight_id
+JOIN aircraft ac ON f.aircraft_id = ac.aircraft_id
+JOIN airport a ON f.arrival_airport_id = a.airport_id
+JOIN booking b ON f.flight_id = b.flight_id
+JOIN payment p ON b.booking_id = p.booking_id
+WHERE ps.pilot_id = '&pilot_id'
+AND f.departure_time BETWEEN TO_DATE('&start_date', 'YYYY-MM-DD') AND TO_DATE('&end_date', 'YYYY-MM-DD')
+GROUP BY a.city, ac.aircraft_name, ac.model;

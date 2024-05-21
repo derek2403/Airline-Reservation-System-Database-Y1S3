@@ -1,0 +1,19 @@
+set linesize 200
+CREATE VIEW flight_details_view AS
+SELECT 
+    f.flight_id,
+    da.name AS departure_airport,
+    aa.name AS arrival_airport,
+    TO_CHAR(f.departure_time, 'DD-MON-YYYY HH24:MI') AS departure_time,
+    TO_CHAR(f.arrival_time, 'DD-MON-YYYY HH24:MI') AS arrival_time,
+    a.aircraft_name,
+    a.model,
+    COUNT(b.booking_id) AS total_bookings
+FROM flight f
+JOIN airport da ON f.departure_airport_id = da.airport_id
+JOIN airport aa ON f.arrival_airport_id = aa.airport_id
+JOIN aircraft a ON f.aircraft_id = a.aircraft_id
+LEFT JOIN booking b ON f.flight_id = b.flight_id
+GROUP BY f.flight_id, da.name, aa.name, f.departure_time, f.arrival_time, a.aircraft_name, a.model;
+TTITLE OFF
+SELECT * FROM flight_details_view;

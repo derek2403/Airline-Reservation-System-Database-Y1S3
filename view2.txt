@@ -1,0 +1,14 @@
+CREATE VIEW customer_bookings_view AS
+SELECT 
+    c.customer_id,
+    c.first_name || ' ' || c.last_name AS customer_name,
+    b.booking_id,
+    b.booking_date,
+    f.flight_id,
+    TO_CHAR(f.departure_time, 'DD-MON-YYYY HH24:MI') AS departure_time,
+    TO_CHAR(f.arrival_time, 'DD-MON-YYYY HH24:MI') AS arrival_time
+FROM customer c
+JOIN booking b ON c.customer_id = b.customer_id
+JOIN flight f ON b.flight_id = f.flight_id;
+TTITLE OFF
+SELECT * FROM customer_bookings_view;

@@ -1,0 +1,10 @@
+ACCEPT crew_id CHAR PROMPT 'Enter Crew Member ID: '
+
+SELECT
+    c.crew_id,
+    c.c_rate AS current_rate,
+    c.c_rate * 1.5 AS next_incentive
+FROM
+    crew_member c
+WHERE
+    c.crew_id = '&crew_id';

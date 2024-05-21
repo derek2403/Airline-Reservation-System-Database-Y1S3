@@ -1,0 +1,22 @@
+ACCEPT start_year PROMPT 'Enter Start Year (YYYY): '
+ACCEPT end_year PROMPT 'Enter End Year (YYYY): '
+ACCEPT aircraft_id PROMPT 'Enter Aircraft ID to be checked or press * to display all: '
+
+COLUMN aircraft_id FORMAT A12 HEADING 'AircraftID'
+COLUMN aircraft_name FORMAT A20 HEADING 'Aircraft Name'
+COLUMN total_revenue FORMAT $999,999.99 HEADING 'Total Revenue'
+
+TTITLE CENTER 'Total Revenue by Aircraft' SKIP 1
+
+SELECT 
+    a.aircraft_id AS "AircraftID",
+    a.aircraft_name AS "Aircraft Name",
+    SUM(p.amount) AS "Total Revenue ($)"
+FROM  aircraft a 
+JOIN flight f ON a.aircraft_id = f.aircraft_id
+JOIN booking b ON f.flight_id = b.flight_id
+JOIN payment p ON b.booking_id = p.booking_id
+WHERE 
+    TO_CHAR(f.departure_time, 'YYYY') BETWEEN '&start_year' AND '&end_year'
+    AND (a.aircraft_id = '&aircraft_id' OR '&aircraft_id' = '*')
+GROUP BY a.aircraft_id, a.aircraft_name;

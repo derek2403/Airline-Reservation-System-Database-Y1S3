@@ -1,0 +1,22 @@
+ACCEPT pilot_id CHAR PROMPT 'Enter Pilot ID: '
+
+SELECT 
+    p.pilot_id AS "PILOT ID",
+    COUNT(*) AS "FLIGHTS COMPLETED",
+    CASE
+        WHEN COUNT(*) >= 30 THEN TO_CHAR(300) 
+        ELSE TO_CHAR(30 - COUNT(*))
+    END AS "FLIGHTS TO NEXT INCENTIVE",
+    CASE
+        WHEN COUNT(*) >= 100 THEN TO_CHAR(0) 
+        ELSE TO_CHAR(100 - COUNT(*))
+    END AS "FLIGHTS TO NEXT RAISE",
+    p.p_salary AS "CURRENT SALARY",
+    CASE
+        WHEN COUNT(*) >= 100 THEN TO_CHAR(p.p_salary + 2500) 
+        ELSE TO_CHAR(p.p_salary + 2500 * CEIL((100 - COUNT(*)) / 100.0))
+    END AS "SALARY AFTER RAISE"
+FROM pilot_schedule ps
+JOIN pilot p ON ps.pilot_id = p.pilot_id
+WHERE p.pilot_id = '&pilot_id'
+GROUP BY p.pilot_id, p.p_salary;

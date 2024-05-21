@@ -1,0 +1,10 @@
+CREATE VIEW refunded_amount_view AS
+SELECT 
+    c.customer_id AS "CustID",
+    c.first_name || ' ' || c.last_name AS customer_name,
+    SUM(r.refund_amt) AS total_refunded_amount
+FROM customer c
+LEFT JOIN refund r ON c.customer_id = r.customer_id
+GROUP BY c.customer_id, c.first_name, c.last_name;
+TTITLE OFF
+SELECT * FROM refunded_amount_view;

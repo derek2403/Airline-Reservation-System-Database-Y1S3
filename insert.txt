@@ -1,0 +1,400 @@
+-- INSERT statements for customer
+INSERT INTO customer (customer_id, first_name, last_name, gender, phone_no, address)
+VALUES ('C12732', 'Wei', 'Tan', 'M', '0123456789', '123 Main St, New York');
+INSERT INTO customer (customer_id, first_name, last_name, gender, phone_no, address)
+VALUES ('C23456', 'Li', 'Lim', 'F', '01234567380', '456 Elm St, London');
+INSERT INTO customer (customer_id, first_name, last_name, gender, phone_no, address)
+VALUES ('C34567', 'Hua', 'Chen', 'M', '0123456781', '789 Oak St, Tokyo');
+INSERT INTO customer (customer_id, first_name, last_name, gender, phone_no, address)
+VALUES ('C45678', 'Mei', 'Tan', 'F', '0123456782', '987 Pine St, Paris');
+INSERT INTO customer (customer_id, first_name, last_name, gender, phone_no, address)
+VALUES ('C56789', 'Xin', 'Chow', 'M', '0123456783', '654 Maple St, Sydney');
+INSERT INTO customer (customer_id, first_name, last_name, gender, phone_no, address)
+VALUES ('C67890', 'Siti', 'Rahman', 'F', '0123456784', '321 Cedar St, Dubai');
+INSERT INTO customer (customer_id, first_name, last_name, gender, phone_no, address)
+VALUES ('C78901', 'Ramesh', 'Patel', 'M', '0123456785', '876 Birch St, Mumbai');
+INSERT INTO customer (customer_id, first_name, last_name, gender, phone_no, address)
+VALUES ('C89012', 'Nur', 'Hamid', 'F', '0123456786', '543 Walnut St, Istanbul');
+INSERT INTO customer (customer_id, first_name, last_name, gender, phone_no, address)
+VALUES ('C90123', 'Sanjay', 'Kumar', 'M', '0123456787', '210 Willow St, Bangkok');
+INSERT INTO customer (customer_id, first_name, last_name, gender, phone_no, address)
+VALUES ('C01234', 'Siti', 'Salleh', 'F', '0123456788', '789 Pine St, Rio de Janeiro');
+
+
+-- INSERT statements for aircraft
+INSERT INTO aircraft (aircraft_id, aircraft_name, model, capacity) VALUES ('A10101', 'Boeing 737', '737-800', 189);
+INSERT INTO aircraft (aircraft_id, aircraft_name, model, capacity) VALUES ('A10102', 'Airbus A320', 'A320neo', 180);
+INSERT INTO aircraft (aircraft_id, aircraft_name, model, capacity) VALUES ('A10103', 'Boeing 777', '777-300ER', 396);
+INSERT INTO aircraft (aircraft_id, aircraft_name, model, capacity) VALUES ('A10104', 'Airbus A350', 'A350-900', 315);
+INSERT INTO aircraft (aircraft_id, aircraft_name, model, capacity) VALUES ('A10105', 'Embraer E190', 'E190-E2', 114);
+INSERT INTO aircraft (aircraft_id, aircraft_name, model, capacity) VALUES ('A10106', 'Bombardier CRJ', 'CRJ900', 90);
+INSERT INTO aircraft (aircraft_id, aircraft_name, model, capacity) VALUES ('A10107', 'ATR 72', 'ATR 72-600', 78);
+INSERT INTO aircraft (aircraft_id, aircraft_name, model, capacity) VALUES ('A10108', 'Boeing 747', '747-400', 524);
+INSERT INTO aircraft (aircraft_id, aircraft_name, model, capacity) VALUES ('A10109', 'Airbus A380', 'A380-800', 555);
+INSERT INTO aircraft (aircraft_id, aircraft_name, model, capacity) VALUES ('A10110', 'Embraer E195', 'E195-E2', 146);
+
+
+-- INSERT statements for pilot
+INSERT INTO pilot (pilot_id, first_name, last_name, p_gender, licenses, p_salary, p_rate) VALUES ('PIL20101', 'John', 'Smith', 'M', 'CPL', 4500, 90);
+INSERT INTO pilot (pilot_id, first_name, last_name, p_gender, licenses, p_salary, p_rate) VALUES ('PIL20102', 'Jane', 'Doe', 'F', 'ATPL', 7000, 140);
+INSERT INTO pilot (pilot_id, first_name, last_name, p_gender, licenses, p_salary, p_rate) VALUES ('PIL20103', 'Michael', 'Johnson', 'M', 'CPL', 4500, 90);
+INSERT INTO pilot (pilot_id, first_name, last_name, p_gender, licenses, p_salary, p_rate) VALUES ('PIL20104', 'Emily', 'Brown', 'F', 'CPL', 4500, 90);
+INSERT INTO pilot (pilot_id, first_name, last_name, p_gender, licenses, p_salary, p_rate) VALUES ('PIL20105', 'David', 'Wilson', 'M', 'ATPL', 7000, 140);
+INSERT INTO pilot (pilot_id, first_name, last_name, p_gender, licenses, p_salary, p_rate) VALUES ('PIL20106', 'Sarah', 'Anderson', 'F', 'ATPL', 7000, 140);
+INSERT INTO pilot (pilot_id, first_name, last_name, p_gender, licenses, p_salary, p_rate) VALUES ('PIL20107', 'Christopher', 'Martinez', 'M', 'ATPL', 7000, 140);
+INSERT INTO pilot (pilot_id, first_name, last_name, p_gender, licenses, p_salary, p_rate) VALUES ('PIL20108', 'Jessica', 'Taylor', 'F', 'CPL', 4500, 90);
+INSERT INTO pilot (pilot_id, first_name, last_name, p_gender, licenses, p_salary, p_rate) VALUES ('PIL20109', 'Daniel', 'Thomas', 'M', 'CPL', 4500, 90);
+INSERT INTO pilot (pilot_id, first_name, last_name, p_gender, licenses, p_salary, p_rate) VALUES ('PIL20110', 'Jennifer', 'Lee', 'F', 'ATPL', 7000, 140);
+
+
+-- INSERT statements for crew_member
+INSERT INTO crew_member (crew_id, first_name, last_name, role, c_gender, c_salary, c_rate) VALUES ('CR30101', 'Robert', 'Williams', 'Technical Crew', 'M', 3000, 60);
+INSERT INTO crew_member (crew_id, first_name, last_name, role, c_gender, c_salary, c_rate) VALUES ('CR30102', 'Alice', 'Johnson', 'Cabin Crew', 'F', 3000, 60);
+INSERT INTO crew_member (crew_id, first_name, last_name, role, c_gender, c_salary, c_rate) VALUES ('CR30103', 'Matthew', 'Davis', 'Cabin Crew', 'M', 3000, 60);
+INSERT INTO crew_member (crew_id, first_name, last_name, role, c_gender, c_salary, c_rate) VALUES ('CR30104', 'Emma', 'Miller', 'Technical Crew', 'F', 3000, 60);
+INSERT INTO crew_member (crew_id, first_name, last_name, role, c_gender, c_salary, c_rate) VALUES ('CR30105', 'James', 'Wilson', 'First Officer', 'M', 3000, 60);
+INSERT INTO crew_member (crew_id, first_name, last_name, role, c_gender, c_salary, c_rate) VALUES ('CR30106', 'Sophia', 'Brown', 'Cabin Crew', 'F', 3000, 60);
+INSERT INTO crew_member (crew_id, first_name, last_name, role, c_gender, c_salary, c_rate) VALUES ('CR30107', 'Daniel', 'Martinez', 'Cabin Crew', 'M', 3000, 60);
+INSERT INTO crew_member (crew_id, first_name, last_name, role, c_gender, c_salary, c_rate) VALUES ('CR30108', 'Olivia', 'Taylor', 'First Officer', 'F', 3000, 60);
+INSERT INTO crew_member (crew_id, first_name, last_name, role, c_gender, c_salary, c_rate) VALUES ('CR30109', 'William', 'Thomas', 'Technical Crew', 'M', 3000, 60);
+INSERT INTO crew_member (crew_id, first_name, last_name, role, c_gender, c_salary, c_rate) VALUES ('CR30110', 'Isabella', 'Lee', 'First Officer', 'F', 3000, 60);
+
+
+-- INSERT statements for airport
+INSERT INTO airport (airport_id, name, city, country) VALUES ('AIR50101', 'John F. Kennedy International Airport', 'New York', 'USA');
+INSERT INTO airport (airport_id, name, city, country) VALUES ('AIR50102', 'Los Angeles International Airport', 'Los Angeles', 'USA');
+INSERT INTO airport (airport_id, name, city, country) VALUES ('AIR50103', 'London Heathrow Airport', 'London', 'UK');
+INSERT INTO airport (airport_id, name, city, country) VALUES ('AIR50104', 'Osaka Itami Airport', 'Osaka', 'Japan');
+INSERT INTO airport (airport_id, name, city, country) VALUES ('AIR50105', 'Beijing Capital International Airport', 'Beijing', 'China');
+INSERT INTO airport (airport_id, name, city, country) VALUES ('AIR50106', 'Tokyo Haneda Airport', 'Tokyo', 'Japan');
+INSERT INTO airport (airport_id, name, city, country) VALUES ('AIR50107', 'Sydney Kingsford Smith Airport', 'Sydney', 'Australia');
+INSERT INTO airport (airport_id, name, city, country) VALUES ('AIR50108', 'Charles de Gaulle Airport', 'Paris', 'France');
+INSERT INTO airport (airport_id, name, city, country) VALUES ('AIR50109', 'Frankfurt Airport', 'Frankfurt', 'Germany');
+INSERT INTO airport (airport_id, name, city, country) VALUES ('AIR50110', 'Singapore Changi Airport', 'Singapore', 'Singapore');
+
+-- INSERT statements for seat
+INSERT INTO seat (seat_id, aircraft_id) VALUES ('S101', 'A10101');
+INSERT INTO seat (seat_id, aircraft_id) VALUES ('S102', 'A10101');
+INSERT INTO seat (seat_id, aircraft_id) VALUES ('S103', 'A10101');
+INSERT INTO seat (seat_id, aircraft_id) VALUES ('S104', 'A10102');
+INSERT INTO seat (seat_id, aircraft_id) VALUES ('S105', 'A10102');
+INSERT INTO seat (seat_id, aircraft_id) VALUES ('S106', 'A10103');
+INSERT INTO seat (seat_id, aircraft_id) VALUES ('S107', 'A10103');
+INSERT INTO seat (seat_id, aircraft_id) VALUES ('S108', 'A10104');
+INSERT INTO seat (seat_id, aircraft_id) VALUES ('S109', 'A10105');
+INSERT INTO seat (seat_id, aircraft_id) VALUES ('S110', 'A10106');
+
+
+-- INSERT statements for flight
+INSERT INTO flight (flight_id, aircraft_id, departure_airport_id, departure_time, arrival_time, arrival_airport_id) VALUES ('F88888', 'A10101', 'AIR50101', TO_DATE('2024-01-02 08:00:00', 'YYYY-MM-DD HH24:MI:SS'), TO_DATE('2024-01-02 10:00:00', 'YYYY-MM-DD HH24:MI:SS'), 'AIR50102');
+
+INSERT INTO flight (flight_id, aircraft_id, departure_airport_id, departure_time, arrival_time, arrival_airport_id) VALUES ('F10101', 'A10101', 'AIR50101', TO_DATE('2024-04-01 08:00:00', 'YYYY-MM-DD HH24:MI:SS'), TO_DATE('2024-04-01 10:00:00', 'YYYY-MM-DD HH24:MI:SS'), 'AIR50102');
+INSERT INTO flight (flight_id, aircraft_id, departure_airport_id, departure_time, arrival_time, arrival_airport_id) VALUES ('F10102', 'A10102', 'AIR50102', TO_DATE('2024-04-01 09:00:00', 'YYYY-MM-DD HH24:MI:SS'), TO_DATE('2024-04-01 11:00:00', 'YYYY-MM-DD HH24:MI:SS'), 'AIR50101');
+INSERT INTO flight (flight_id, aircraft_id, departure_airport_id, departure_time, arrival_time, arrival_airport_id) VALUES ('F10103', 'A10103', 'AIR50101', TO_DATE('2024-04-01 10:00:00', 'YYYY-MM-DD HH24:MI:SS'), TO_DATE('2024-04-01 12:00:00', 'YYYY-MM-DD HH24:MI:SS'), 'AIR50102');
+INSERT INTO flight (flight_id, aircraft_id, departure_airport_id, departure_time, arrival_time, arrival_airport_id) VALUES ('F10104', 'A10104', 'AIR50104', TO_DATE('2024-04-01 11:00:00', 'YYYY-MM-DD HH24:MI:SS'), TO_DATE('2024-04-01 13:00:00', 'YYYY-MM-DD HH24:MI:SS'), 'AIR50106');
+INSERT INTO flight (flight_id, aircraft_id, departure_airport_id, departure_time, arrival_time, arrival_airport_id) VALUES ('F10105', 'A10105', 'AIR50104', TO_DATE('2024-04-01 12:00:00', 'YYYY-MM-DD HH24:MI:SS'), TO_DATE('2024-04-01 14:00:00', 'YYYY-MM-DD HH24:MI:SS'), 'AIR50106');
+INSERT INTO flight (flight_id, aircraft_id, departure_airport_id, departure_time, arrival_time, arrival_airport_id) VALUES ('F10106', 'A10106', 'AIR50106', TO_DATE('2024-04-01 13:00:00', 'YYYY-MM-DD HH24:MI:SS'), TO_DATE('2024-04-01 15:00:00', 'YYYY-MM-DD HH24:MI:SS'), 'AIR50107');
+INSERT INTO flight (flight_id, aircraft_id, departure_airport_id, departure_time, arrival_time, arrival_airport_id) VALUES ('F10107', 'A10107', 'AIR50107', TO_DATE('2024-04-01 14:00:00', 'YYYY-MM-DD HH24:MI:SS'), TO_DATE('2024-04-01 16:00:00', 'YYYY-MM-DD HH24:MI:SS'), 'AIR50108');
+INSERT INTO flight (flight_id, aircraft_id, departure_airport_id, departure_time, arrival_time, arrival_airport_id) VALUES ('F10108', 'A10108', 'AIR50106', TO_DATE('2024-04-01 15:00:00', 'YYYY-MM-DD HH24:MI:SS'), TO_DATE('2024-04-01 17:00:00', 'YYYY-MM-DD HH24:MI:SS'), 'AIR50104');
+INSERT INTO flight (flight_id, aircraft_id, departure_airport_id, departure_time, arrival_time, arrival_airport_id) VALUES ('F10109', 'A10109', 'AIR50109', TO_DATE('2024-04-01 16:00:00', 'YYYY-MM-DD HH24:MI:SS'), TO_DATE('2024-04-01 18:00:00', 'YYYY-MM-DD HH24:MI:SS'), 'AIR50110');
+INSERT INTO flight (flight_id, aircraft_id, departure_airport_id, departure_time, arrival_time, arrival_airport_id) VALUES ('F10110', 'A10110', 'AIR50104', TO_DATE('2024-04-10 17:00:00', 'YYYY-MM-DD HH24:MI:SS'), TO_DATE('2024-04-10 19:00:00', 'YYYY-MM-DD HH24:MI:SS'), 'AIR50106');
+INSERT INTO flight (flight_id, aircraft_id, departure_airport_id, departure_time, arrival_time, arrival_airport_id) VALUES ('F10111', 'A10101', 'AIR50102', TO_DATE('2023-05-11 08:00:00', 'YYYY-MM-DD HH24:MI:SS'), TO_DATE('2023-05-11 10:00:00', 'YYYY-MM-DD HH24:MI:SS'), 'AIR50103');
+INSERT INTO flight (flight_id, aircraft_id, departure_airport_id, departure_time, arrival_time, arrival_airport_id) VALUES ('F10112', 'A10102', 'AIR50103', TO_DATE('2023-05-12 09:00:00', 'YYYY-MM-DD HH24:MI:SS'), TO_DATE('2023-05-12 11:00:00', 'YYYY-MM-DD HH24:MI:SS'), 'AIR50104');
+INSERT INTO flight (flight_id, aircraft_id, departure_airport_id, departure_time, arrival_time, arrival_airport_id) VALUES ('F10113', 'A10103', 'AIR50104', TO_DATE('2023-05-13 10:00:00', 'YYYY-MM-DD HH24:MI:SS'), TO_DATE('2023-05-13 12:00:00', 'YYYY-MM-DD HH24:MI:SS'), 'AIR50105');
+INSERT INTO flight (flight_id, aircraft_id, departure_airport_id, departure_time, arrival_time, arrival_airport_id) VALUES ('F10114', 'A10104', 'AIR50101', TO_DATE('2023-05-14 11:00:00', 'YYYY-MM-DD HH24:MI:SS'), TO_DATE('2023-05-14 13:00:00', 'YYYY-MM-DD HH24:MI:SS'), 'AIR50102');
+INSERT INTO flight (flight_id, aircraft_id, departure_airport_id, departure_time, arrival_time, arrival_airport_id) VALUES ('F10115', 'A10105', 'AIR50106', TO_DATE('2023-05-15 12:00:00', 'YYYY-MM-DD HH24:MI:SS'), TO_DATE('2023-05-15 14:00:00', 'YYYY-MM-DD HH24:MI:SS'), 'AIR50107');
+INSERT INTO flight (flight_id, aircraft_id, departure_airport_id, departure_time, arrival_time, arrival_airport_id) VALUES ('F10116', 'A10106', 'AIR50107', TO_DATE('2023-05-16 13:00:00', 'YYYY-MM-DD HH24:MI:SS'), TO_DATE('2023-05-16 15:00:00', 'YYYY-MM-DD HH24:MI:SS'), 'AIR50108');
+INSERT INTO flight (flight_id, aircraft_id, departure_airport_id, departure_time, arrival_time, arrival_airport_id) VALUES ('F10117', 'A10107', 'AIR50108', TO_DATE('2023-05-17 14:00:00', 'YYYY-MM-DD HH24:MI:SS'), TO_DATE('2023-05-17 16:00:00', 'YYYY-MM-DD HH24:MI:SS'), 'AIR50109');
+INSERT INTO flight (flight_id, aircraft_id, departure_airport_id, departure_time, arrival_time, arrival_airport_id) VALUES ('F10118', 'A10108', 'AIR50109', TO_DATE('2023-05-18 15:00:00', 'YYYY-MM-DD HH24:MI:SS'), TO_DATE('2023-05-18 17:00:00', 'YYYY-MM-DD HH24:MI:SS'), 'AIR50110');
+INSERT INTO flight (flight_id, aircraft_id, departure_airport_id, departure_time, arrival_time, arrival_airport_id) VALUES ('F10119', 'A10109', 'AIR50110', TO_DATE('2023-05-19 16:00:00', 'YYYY-MM-DD HH24:MI:SS'), TO_DATE('2023-05-19 18:00:00', 'YYYY-MM-DD HH24:MI:SS'), 'AIR50101');
+INSERT INTO flight (flight_id, aircraft_id, departure_airport_id, departure_time, arrival_time, arrival_airport_id) VALUES ('F10120', 'A10110', 'AIR50101', TO_DATE('2023-05-20 17:00:00', 'YYYY-MM-DD HH24:MI:SS'), TO_DATE('2023-05-20 19:00:00', 'YYYY-MM-DD HH24:MI:SS'), 'AIR50102');
+INSERT INTO flight (flight_id, aircraft_id, departure_airport_id, departure_time, arrival_time, arrival_airport_id) VALUES ('F20101', 'A10101', 'AIR50103', TO_DATE('2022-06-21 08:00:00', 'YYYY-MM-DD HH24:MI:SS'), TO_DATE('2022-06-21 10:00:00', 'YYYY-MM-DD HH24:MI:SS'), 'AIR50104');
+INSERT INTO flight (flight_id, aircraft_id, departure_airport_id, departure_time, arrival_time, arrival_airport_id) VALUES ('F20102', 'A10102', 'AIR50104', TO_DATE('2022-06-22 09:00:00', 'YYYY-MM-DD HH24:MI:SS'), TO_DATE('2022-06-22 11:00:00', 'YYYY-MM-DD HH24:MI:SS'), 'AIR50105');
+INSERT INTO flight (flight_id, aircraft_id, departure_airport_id, departure_time, arrival_time, arrival_airport_id) VALUES ('F20103', 'A10103', 'AIR50105', TO_DATE('2022-06-23 10:00:00', 'YYYY-MM-DD HH24:MI:SS'), TO_DATE('2022-06-23 12:00:00', 'YYYY-MM-DD HH24:MI:SS'), 'AIR50106');
+INSERT INTO flight (flight_id, aircraft_id, departure_airport_id, departure_time, arrival_time, arrival_airport_id) VALUES ('F20104', 'A10104', 'AIR50106', TO_DATE('2022-06-24 11:00:00', 'YYYY-MM-DD HH24:MI:SS'), TO_DATE('2022-06-24 13:00:00', 'YYYY-MM-DD HH24:MI:SS'), 'AIR50107');
+INSERT INTO flight (flight_id, aircraft_id, departure_airport_id, departure_time, arrival_time, arrival_airport_id) VALUES ('F20105', 'A10105', 'AIR50107', TO_DATE('2022-06-25 12:00:00', 'YYYY-MM-DD HH24:MI:SS'), TO_DATE('2022-06-25 14:00:00', 'YYYY-MM-DD HH24:MI:SS'), 'AIR50108');
+INSERT INTO flight (flight_id, aircraft_id, departure_airport_id, departure_time, arrival_time, arrival_airport_id) VALUES ('F20106', 'A10106', 'AIR50108', TO_DATE('2022-06-26 13:00:00', 'YYYY-MM-DD HH24:MI:SS'), TO_DATE('2022-06-26 15:00:00', 'YYYY-MM-DD HH24:MI:SS'), 'AIR50109');
+INSERT INTO flight (flight_id, aircraft_id, departure_airport_id, departure_time, arrival_time, arrival_airport_id) VALUES ('F20107', 'A10107', 'AIR50109', TO_DATE('2022-06-27 14:00:00', 'YYYY-MM-DD HH24:MI:SS'), TO_DATE('2022-06-27 16:00:00', 'YYYY-MM-DD HH24:MI:SS'), 'AIR50110');
+INSERT INTO flight (flight_id, aircraft_id, departure_airport_id, departure_time, arrival_time, arrival_airport_id) VALUES ('F20108', 'A10108', 'AIR50110', TO_DATE('2022-06-28 15:00:00', 'YYYY-MM-DD HH24:MI:SS'), TO_DATE('2022-06-28 17:00:00', 'YYYY-MM-DD HH24:MI:SS'), 'AIR50101');
+INSERT INTO flight (flight_id, aircraft_id, departure_airport_id, departure_time, arrival_time, arrival_airport_id) VALUES ('F20109', 'A10109', 'AIR50101', TO_DATE('2022-06-29 16:00:00', 'YYYY-MM-DD HH24:MI:SS'), TO_DATE('2022-06-29 18:00:00', 'YYYY-MM-DD HH24:MI:SS'), 'AIR50102');
+INSERT INTO flight (flight_id, aircraft_id, departure_airport_id, departure_time, arrival_time, arrival_airport_id) VALUES ('F20110', 'A10110', 'AIR50102', TO_DATE('2022-06-30 17:00:00', 'YYYY-MM-DD HH24:MI:SS'), TO_DATE('2022-06-30 19:00:00', 'YYYY-MM-DD HH24:MI:SS'), 'AIR50103');
+
+-- INSERT statements for booking
+INSERT INTO booking (booking_id, customer_id, booking_date, flight_id) VALUES ('B88888', 'C12732', TO_DATE('2023-12-30', 'YYYY-MM-DD'), 'F88888');
+
+INSERT INTO booking (booking_id, customer_id, booking_date, flight_id) VALUES ('B00101', 'C12732', TO_DATE('2024-04-01', 'YYYY-MM-DD'), 'F10101');
+INSERT INTO booking (booking_id, customer_id, booking_date, flight_id) VALUES ('B00102', 'C23456', TO_DATE('2024-04-01', 'YYYY-MM-DD'), 'F10102');
+INSERT INTO booking (booking_id, customer_id, booking_date, flight_id) VALUES ('B00103', 'C34567', TO_DATE('2024-04-01', 'YYYY-MM-DD'), 'F10103');
+INSERT INTO booking (booking_id, customer_id, booking_date, flight_id) VALUES ('B00104', 'C45678', TO_DATE('2024-04-01', 'YYYY-MM-DD'), 'F10104');
+INSERT INTO booking (booking_id, customer_id, booking_date, flight_id) VALUES ('B00105', 'C56789', TO_DATE('2024-04-01', 'YYYY-MM-DD'), 'F10105');
+INSERT INTO booking (booking_id, customer_id, booking_date, flight_id) VALUES ('B00106', 'C67890', TO_DATE('2024-04-01', 'YYYY-MM-DD'), 'F10106');
+INSERT INTO booking (booking_id, customer_id, booking_date, flight_id) VALUES ('B00107', 'C78901', TO_DATE('2024-04-01', 'YYYY-MM-DD'), 'F10107');
+INSERT INTO booking (booking_id, customer_id, booking_date, flight_id) VALUES ('B00108', 'C89012', TO_DATE('2024-04-01', 'YYYY-MM-DD'), 'F10108');
+INSERT INTO booking (booking_id, customer_id, booking_date, flight_id) VALUES ('B00109', 'C90123', TO_DATE('2024-04-01', 'YYYY-MM-DD'), 'F10109');
+INSERT INTO booking (booking_id, customer_id, booking_date, flight_id) VALUES ('B00110', 'C01234', TO_DATE('2024-04-10', 'YYYY-MM-DD'), 'F10110');
+INSERT INTO booking (booking_id, customer_id, booking_date, flight_id) VALUES ('B00111', 'C12732', TO_DATE('2024-04-11', 'YYYY-MM-DD'), 'F10111');
+INSERT INTO booking (booking_id, customer_id, booking_date, flight_id) VALUES ('B00112', 'C23456', TO_DATE('2024-04-12', 'YYYY-MM-DD'), 'F10112');
+INSERT INTO booking (booking_id, customer_id, booking_date, flight_id) VALUES ('B00113', 'C34567', TO_DATE('2024-04-13', 'YYYY-MM-DD'), 'F10113');
+INSERT INTO booking (booking_id, customer_id, booking_date, flight_id) VALUES ('B00114', 'C45678', TO_DATE('2024-04-14', 'YYYY-MM-DD'), 'F10114');
+INSERT INTO booking (booking_id, customer_id, booking_date, flight_id) VALUES ('B00115', 'C56789', TO_DATE('2024-04-15', 'YYYY-MM-DD'), 'F10115');
+INSERT INTO booking (booking_id, customer_id, booking_date, flight_id) VALUES ('B00116', 'C67890', TO_DATE('2024-04-16', 'YYYY-MM-DD'), 'F10116');
+INSERT INTO booking (booking_id, customer_id, booking_date, flight_id) VALUES ('B00117', 'C78901', TO_DATE('2024-04-17', 'YYYY-MM-DD'), 'F10117');
+INSERT INTO booking (booking_id, customer_id, booking_date, flight_id) VALUES ('B00118', 'C89012', TO_DATE('2024-04-18', 'YYYY-MM-DD'), 'F10118');
+INSERT INTO booking (booking_id, customer_id, booking_date, flight_id) VALUES ('B00119', 'C90123', TO_DATE('2024-04-19', 'YYYY-MM-DD'), 'F10119');
+INSERT INTO booking (booking_id, customer_id, booking_date, flight_id) VALUES ('B00120', 'C01234', TO_DATE('2024-04-20', 'YYYY-MM-DD'), 'F10120');
+INSERT INTO booking (booking_id, customer_id, booking_date, flight_id) VALUES ('B00121', 'C12732', TO_DATE('2023-04-21', 'YYYY-MM-DD'), 'F20101');
+INSERT INTO booking (booking_id, customer_id, booking_date, flight_id) VALUES ('B00122', 'C23456', TO_DATE('2023-04-22', 'YYYY-MM-DD'), 'F20102');
+INSERT INTO booking (booking_id, customer_id, booking_date, flight_id) VALUES ('B00123', 'C34567', TO_DATE('2023-04-23', 'YYYY-MM-DD'), 'F20103');
+INSERT INTO booking (booking_id, customer_id, booking_date, flight_id) VALUES ('B00124', 'C45678', TO_DATE('2023-04-24', 'YYYY-MM-DD'), 'F20104');
+INSERT INTO booking (booking_id, customer_id, booking_date, flight_id) VALUES ('B00125', 'C56789', TO_DATE('2023-04-25', 'YYYY-MM-DD'), 'F20105');
+INSERT INTO booking (booking_id, customer_id, booking_date, flight_id) VALUES ('B00126', 'C67890', TO_DATE('2023-04-26', 'YYYY-MM-DD'), 'F20106');
+INSERT INTO booking (booking_id, customer_id, booking_date, flight_id) VALUES ('B00127', 'C78901', TO_DATE('2023-04-27', 'YYYY-MM-DD'), 'F20107');
+INSERT INTO booking (booking_id, customer_id, booking_date, flight_id) VALUES ('B00128', 'C89012', TO_DATE('2023-04-28', 'YYYY-MM-DD'), 'F20108');
+INSERT INTO booking (booking_id, customer_id, booking_date, flight_id) VALUES ('B00129', 'C90123', TO_DATE('2023-04-29', 'YYYY-MM-DD'), 'F20109');
+INSERT INTO booking (booking_id, customer_id, booking_date, flight_id) VALUES ('B00130', 'C01234', TO_DATE('2023-04-30', 'YYYY-MM-DD'), 'F20110');
+INSERT INTO booking (booking_id, customer_id, booking_date, flight_id) VALUES ('B00131', 'C12732', TO_DATE('2023-05-01', 'YYYY-MM-DD'), 'F10111');
+INSERT INTO booking (booking_id, customer_id, booking_date, flight_id) VALUES ('B00132', 'C23456', TO_DATE('2023-05-02', 'YYYY-MM-DD'), 'F10112');
+INSERT INTO booking (booking_id, customer_id, booking_date, flight_id) VALUES ('B00133', 'C34567', TO_DATE('2023-05-03', 'YYYY-MM-DD'), 'F10113');
+INSERT INTO booking (booking_id, customer_id, booking_date, flight_id) VALUES ('B00134', 'C45678', TO_DATE('2023-05-04', 'YYYY-MM-DD'), 'F10114');
+INSERT INTO booking (booking_id, customer_id, booking_date, flight_id) VALUES ('B00135', 'C56789', TO_DATE('2023-05-05', 'YYYY-MM-DD'), 'F10115');
+INSERT INTO booking (booking_id, customer_id, booking_date, flight_id) VALUES ('B00136', 'C67890', TO_DATE('2023-05-06', 'YYYY-MM-DD'), 'F10116');
+INSERT INTO booking (booking_id, customer_id, booking_date, flight_id) VALUES ('B00137', 'C78901', TO_DATE('2023-05-07', 'YYYY-MM-DD'), 'F10117');
+INSERT INTO booking (booking_id, customer_id, booking_date, flight_id) VALUES ('B00138', 'C89012', TO_DATE('2023-05-08', 'YYYY-MM-DD'), 'F10118');
+INSERT INTO booking (booking_id, customer_id, booking_date, flight_id) VALUES ('B00139', 'C90123', TO_DATE('2023-05-09', 'YYYY-MM-DD'), 'F10119');
+INSERT INTO booking (booking_id, customer_id, booking_date, flight_id) VALUES ('B00140', 'C01234', TO_DATE('2023-05-10', 'YYYY-MM-DD'), 'F10120');
+INSERT INTO booking (booking_id, customer_id, booking_date, flight_id) VALUES ('B00141', 'C12732', TO_DATE('2022-05-11', 'YYYY-MM-DD'), 'F20101');
+INSERT INTO booking (booking_id, customer_id, booking_date, flight_id) VALUES ('B00142', 'C23456', TO_DATE('2022-06-12', 'YYYY-MM-DD'), 'F20102');
+INSERT INTO booking (booking_id, customer_id, booking_date, flight_id) VALUES ('B00143', 'C34567', TO_DATE('2022-06-13', 'YYYY-MM-DD'), 'F20103');
+INSERT INTO booking (booking_id, customer_id, booking_date, flight_id) VALUES ('B00144', 'C45678', TO_DATE('2022-06-14', 'YYYY-MM-DD'), 'F20104');
+INSERT INTO booking (booking_id, customer_id, booking_date, flight_id) VALUES ('B00145', 'C56789', TO_DATE('2022-06-15', 'YYYY-MM-DD'), 'F20105');
+INSERT INTO booking (booking_id, customer_id, booking_date, flight_id) VALUES ('B00146', 'C67890', TO_DATE('2022-06-16', 'YYYY-MM-DD'), 'F20106');
+INSERT INTO booking (booking_id, customer_id, booking_date, flight_id) VALUES ('B00147', 'C78901', TO_DATE('2022-06-17', 'YYYY-MM-DD'), 'F20107');
+INSERT INTO booking (booking_id, customer_id, booking_date, flight_id) VALUES ('B00148', 'C89012', TO_DATE('2022-06-18', 'YYYY-MM-DD'), 'F20108');
+INSERT INTO booking (booking_id, customer_id, booking_date, flight_id) VALUES ('B00149', 'C90123', TO_DATE('2022-06-19', 'YYYY-MM-DD'), 'F20109');
+INSERT INTO booking (booking_id, customer_id, booking_date, flight_id) VALUES ('B00150', 'C01234', TO_DATE('2022-06-20', 'YYYY-MM-DD'), 'F20110');
+INSERT INTO booking (booking_id, customer_id, booking_date, flight_id) VALUES ('B00151', 'C12732', TO_DATE('2022-06-21', 'YYYY-MM-DD'), 'F10111');
+INSERT INTO booking (booking_id, customer_id, booking_date, flight_id) VALUES ('B00152', 'C23456', TO_DATE('2022-07-22', 'YYYY-MM-DD'), 'F10112');
+INSERT INTO booking (booking_id, customer_id, booking_date, flight_id) VALUES ('B00153', 'C34567', TO_DATE('2022-07-23', 'YYYY-MM-DD'), 'F10113');
+INSERT INTO booking (booking_id, customer_id, booking_date, flight_id) VALUES ('B00154', 'C45678', TO_DATE('2022-07-24', 'YYYY-MM-DD'), 'F10114');
+INSERT INTO booking (booking_id, customer_id, booking_date, flight_id) VALUES ('B00155', 'C56789', TO_DATE('2022-07-25', 'YYYY-MM-DD'), 'F10115');
+INSERT INTO booking (booking_id, customer_id, booking_date, flight_id) VALUES ('B00156', 'C67890', TO_DATE('2022-07-26', 'YYYY-MM-DD'), 'F10116');
+INSERT INTO booking (booking_id, customer_id, booking_date, flight_id) VALUES ('B00157', 'C78901', TO_DATE('2022-07-27', 'YYYY-MM-DD'), 'F10117');
+INSERT INTO booking (booking_id, customer_id, booking_date, flight_id) VALUES ('B00158', 'C89012', TO_DATE('2022-07-28', 'YYYY-MM-DD'), 'F10118');
+INSERT INTO booking (booking_id, customer_id, booking_date, flight_id) VALUES ('B00159', 'C90123', TO_DATE('2022-07-29', 'YYYY-MM-DD'), 'F10119');
+INSERT INTO booking (booking_id, customer_id, booking_date, flight_id) VALUES ('B00160', 'C01234', TO_DATE('2022-07-30', 'YYYY-MM-DD'), 'F10120');
+
+-- INSERT statements for payment
+INSERT INTO payment (payment_id, booking_id, amount) VALUES ('P88888', 'B88888', 10000.00);
+
+INSERT INTO payment (payment_id, booking_id, amount) VALUES ('P00131', 'B00101', 500.00);
+INSERT INTO payment (payment_id, booking_id, amount) VALUES ('P00132', 'B00101', 500.00);
+INSERT INTO payment (payment_id, booking_id, amount) VALUES ('P00133', 'B00102', 600.00);
+INSERT INTO payment (payment_id, booking_id, amount) VALUES ('P00134', 'B00102', 600.00);
+INSERT INTO payment (payment_id, booking_id, amount) VALUES ('P00135', 'B00103', 700.00);
+INSERT INTO payment (payment_id, booking_id, amount) VALUES ('P00136', 'B00103', 700.00);
+INSERT INTO payment (payment_id, booking_id, amount) VALUES ('P00137', 'B00104', 800.00);
+INSERT INTO payment (payment_id, booking_id, amount) VALUES ('P00138', 'B00104', 800.00);
+INSERT INTO payment (payment_id, booking_id, amount) VALUES ('P00139', 'B00105', 900.00);
+INSERT INTO payment (payment_id, booking_id, amount) VALUES ('P00140', 'B00105', 900.00);
+INSERT INTO payment (payment_id, booking_id, amount) VALUES ('P00141', 'B00106', 1000.00);
+INSERT INTO payment (payment_id, booking_id, amount) VALUES ('P00142', 'B00106', 1000.00);
+INSERT INTO payment (payment_id, booking_id, amount) VALUES ('P00143', 'B00107', 1100.00);
+INSERT INTO payment (payment_id, booking_id, amount) VALUES ('P00144', 'B00107', 1100.00);
+INSERT INTO payment (payment_id, booking_id, amount) VALUES ('P00145', 'B00108', 1200.00);
+INSERT INTO payment (payment_id, booking_id, amount) VALUES ('P00146', 'B00108', 1200.00);
+INSERT INTO payment (payment_id, booking_id, amount) VALUES ('P00147', 'B00109', 1300.00);
+INSERT INTO payment (payment_id, booking_id, amount) VALUES ('P00148', 'B00109', 1300.00);
+INSERT INTO payment (payment_id, booking_id, amount) VALUES ('P00149', 'B00110', 1400.00);
+INSERT INTO payment (payment_id, booking_id, amount) VALUES ('P00150', 'B00110', 1400.00);
+INSERT INTO payment (payment_id, booking_id, amount) VALUES ('P00151', 'B00111', 1500.00);
+INSERT INTO payment (payment_id, booking_id, amount) VALUES ('P00152', 'B00111', 1500.00);
+INSERT INTO payment (payment_id, booking_id, amount) VALUES ('P00153', 'B00112', 1600.00);
+INSERT INTO payment (payment_id, booking_id, amount) VALUES ('P00154', 'B00112', 1600.00);
+INSERT INTO payment (payment_id, booking_id, amount) VALUES ('P00155', 'B00113', 1700.00);
+INSERT INTO payment (payment_id, booking_id, amount) VALUES ('P00156', 'B00113', 1700.00);
+INSERT INTO payment (payment_id, booking_id, amount) VALUES ('P00157', 'B00114', 1800.00);
+INSERT INTO payment (payment_id, booking_id, amount) VALUES ('P00158', 'B00114', 1800.00);
+INSERT INTO payment (payment_id, booking_id, amount) VALUES ('P00159', 'B00115', 1900.00);
+INSERT INTO payment (payment_id, booking_id, amount) VALUES ('P00160', 'B00115', 1900.00);
+INSERT INTO payment (payment_id, booking_id, amount) VALUES ('P00161', 'B00116', 2000.00);
+INSERT INTO payment (payment_id, booking_id, amount) VALUES ('P00162', 'B00116', 2000.00);
+INSERT INTO payment (payment_id, booking_id, amount) VALUES ('P00163', 'B00117', 2100.00);
+INSERT INTO payment (payment_id, booking_id, amount) VALUES ('P00164', 'B00117', 2100.00);
+INSERT INTO payment (payment_id, booking_id, amount) VALUES ('P00165', 'B00118', 2200.00);
+INSERT INTO payment (payment_id, booking_id, amount) VALUES ('P00166', 'B00118', 2200.00);
+INSERT INTO payment (payment_id, booking_id, amount) VALUES ('P00167', 'B00119', 2300.00);
+INSERT INTO payment (payment_id, booking_id, amount) VALUES ('P00168', 'B00119', 2300.00);
+INSERT INTO payment (payment_id, booking_id, amount) VALUES ('P00169', 'B00120', 2400.00);
+INSERT INTO payment (payment_id, booking_id, amount) VALUES ('P00170', 'B00120', 2400.00);
+INSERT INTO payment (payment_id, booking_id, amount) VALUES ('P00171', 'B00121', 2500.00);
+INSERT INTO payment (payment_id, booking_id, amount) VALUES ('P00172', 'B00121', 2500.00);
+INSERT INTO payment (payment_id, booking_id, amount) VALUES ('P00173', 'B00122', 2600.00);
+INSERT INTO payment (payment_id, booking_id, amount) VALUES ('P00174', 'B00122', 2600.00);
+INSERT INTO payment (payment_id, booking_id, amount) VALUES ('P00175', 'B00123', 2700.00);
+INSERT INTO payment (payment_id, booking_id, amount) VALUES ('P00176', 'B00123', 2700.00);
+INSERT INTO payment (payment_id, booking_id, amount) VALUES ('P00177', 'B00124', 2800.00);
+INSERT INTO payment (payment_id, booking_id, amount) VALUES ('P00178', 'B00124', 2800.00);
+INSERT INTO payment (payment_id, booking_id, amount) VALUES ('P00179', 'B00125', 2900.00);
+INSERT INTO payment (payment_id, booking_id, amount) VALUES ('P00180', 'B00125', 2900.00);
+INSERT INTO payment (payment_id, booking_id, amount) VALUES ('P00181', 'B00126', 3000.00);
+INSERT INTO payment (payment_id, booking_id, amount) VALUES ('P00182', 'B00126', 3000.00);
+INSERT INTO payment (payment_id, booking_id, amount) VALUES ('P00183', 'B00127', 3100.00);
+INSERT INTO payment (payment_id, booking_id, amount) VALUES ('P00184', 'B00127', 3100.00);
+INSERT INTO payment (payment_id, booking_id, amount) VALUES ('P00185', 'B00128', 3200.00);
+INSERT INTO payment (payment_id, booking_id, amount) VALUES ('P00186', 'B00128', 3200.00);
+INSERT INTO payment (payment_id, booking_id, amount) VALUES ('P00187', 'B00129', 3300.00);
+INSERT INTO payment (payment_id, booking_id, amount) VALUES ('P00188', 'B00129', 3300.00);
+INSERT INTO payment (payment_id, booking_id, amount) VALUES ('P00189', 'B00130', 3400.00);
+INSERT INTO payment (payment_id, booking_id, amount) VALUES ('P00190', 'B00130', 3400.00);
+INSERT INTO payment (payment_id, booking_id, amount) VALUES ('P00191', 'B00131', 500.00);
+INSERT INTO payment (payment_id, booking_id, amount) VALUES ('P00192', 'B00132', 600.00);
+INSERT INTO payment (payment_id, booking_id, amount) VALUES ('P00193', 'B00133', 700.00);
+INSERT INTO payment (payment_id, booking_id, amount) VALUES ('P00194', 'B00134', 800.00);
+INSERT INTO payment (payment_id, booking_id, amount) VALUES ('P00195', 'B00135', 900.00);
+INSERT INTO payment (payment_id, booking_id, amount) VALUES ('P00196', 'B00136', 1000.00);
+INSERT INTO payment (payment_id, booking_id, amount) VALUES ('P00197', 'B00137', 1100.00);
+INSERT INTO payment (payment_id, booking_id, amount) VALUES ('P00198', 'B00138', 1200.00);
+INSERT INTO payment (payment_id, booking_id, amount) VALUES ('P00199', 'B00139', 1300.00);
+INSERT INTO payment (payment_id, booking_id, amount) VALUES ('P00200', 'B00140', 1400.00);
+INSERT INTO payment (payment_id, booking_id, amount) VALUES ('P00201', 'B00141', 1500.00);
+INSERT INTO payment (payment_id, booking_id, amount) VALUES ('P00202', 'B00142', 1600.00);
+INSERT INTO payment (payment_id, booking_id, amount) VALUES ('P00203', 'B00143', 1700.00);
+INSERT INTO payment (payment_id, booking_id, amount) VALUES ('P00204', 'B00144', 1800.00);
+INSERT INTO payment (payment_id, booking_id, amount) VALUES ('P00205', 'B00145', 1900.00);
+INSERT INTO payment (payment_id, booking_id, amount) VALUES ('P00206', 'B00146', 2000.00);
+INSERT INTO payment (payment_id, booking_id, amount) VALUES ('P00207', 'B00147', 2100.00);
+INSERT INTO payment (payment_id, booking_id, amount) VALUES ('P00208', 'B00148', 2200.00);
+INSERT INTO payment (payment_id, booking_id, amount) VALUES ('P00209', 'B00149', 2300.00);
+INSERT INTO payment (payment_id, booking_id, amount) VALUES ('P00210', 'B00150', 2400.00);
+INSERT INTO payment (payment_id, booking_id, amount) VALUES ('P00211', 'B00151', 2500.00);
+INSERT INTO payment (payment_id, booking_id, amount) VALUES ('P00212', 'B00152', 2600.00);
+INSERT INTO payment (payment_id, booking_id, amount) VALUES ('P00213', 'B00153', 2700.00);
+INSERT INTO payment (payment_id, booking_id, amount) VALUES ('P00214', 'B00154', 2800.00);
+INSERT INTO payment (payment_id, booking_id, amount) VALUES ('P00215', 'B00155', 2900.00);
+INSERT INTO payment (payment_id, booking_id, amount) VALUES ('P00216', 'B00156', 3000.00);
+INSERT INTO payment (payment_id, booking_id, amount) VALUES ('P00217', 'B00157', 3100.00);
+INSERT INTO payment (payment_id, booking_id, amount) VALUES ('P00218', 'B00158', 3200.00);
+INSERT INTO payment (payment_id, booking_id, amount) VALUES ('P00219', 'B00159', 3300.00);
+INSERT INTO payment (payment_id, booking_id, amount) VALUES ('P00220', 'B00160', 3400.00);
+
+
+-- INSERT statements for refund
+INSERT INTO refund (refund_id, customer_id, payment_id, booking_id, refund_amt, refund_date) VALUES ('R00101', 'C12732', 'P00131', 'B00101', 500.00, TO_DATE('2024-04-05', 'YYYY-MM-DD'));
+INSERT INTO refund (refund_id, customer_id, payment_id, booking_id, refund_amt, refund_date) VALUES ('R00102', 'C23456', 'P00132', 'B00102', 600.00, TO_DATE('2024-04-06', 'YYYY-MM-DD'));
+INSERT INTO refund (refund_id, customer_id, payment_id, booking_id, refund_amt, refund_date) VALUES ('R00103', 'C34567', 'P00133', 'B00103', 700.00, TO_DATE('2024-04-07', 'YYYY-MM-DD'));
+INSERT INTO refund (refund_id, customer_id, payment_id, booking_id, refund_amt, refund_date) VALUES ('R00104', 'C45678', 'P00134', 'B00104', 800.00, TO_DATE('2024-04-08', 'YYYY-MM-DD'));
+INSERT INTO refund (refund_id, customer_id, payment_id, booking_id, refund_amt, refund_date) VALUES ('R00105', 'C56789', 'P00135', 'B00105', 900.00, TO_DATE('2024-04-09', 'YYYY-MM-DD'));
+INSERT INTO refund (refund_id, customer_id, payment_id, booking_id, refund_amt, refund_date) VALUES ('R00106', 'C67890', 'P00136', 'B00106', 1000.00, TO_DATE('2024-04-10', 'YYYY-MM-DD'));
+INSERT INTO refund (refund_id, customer_id, payment_id, booking_id, refund_amt, refund_date) VALUES ('R00107', 'C78901', 'P00137', 'B00107', 1100.00, TO_DATE('2024-04-11', 'YYYY-MM-DD'));
+INSERT INTO refund (refund_id, customer_id, payment_id, booking_id, refund_amt, refund_date) VALUES ('R00108', 'C89012', 'P00138', 'B00108', 1200.00, TO_DATE('2024-04-12', 'YYYY-MM-DD'));
+INSERT INTO refund (refund_id, customer_id, payment_id, booking_id, refund_amt, refund_date) VALUES ('R00109', 'C90123', 'P00139', 'B00109', 1300.00, TO_DATE('2024-04-13', 'YYYY-MM-DD'));
+INSERT INTO refund (refund_id, customer_id, payment_id, booking_id, refund_amt, refund_date) VALUES ('R00110', 'C01234', 'P00140', 'B00110', 1400.00, TO_DATE('2024-04-14', 'YYYY-MM-DD'));
+
+-- INSERT statements for pilot_schedule
+INSERT INTO pilot_schedule (flight_id, pilot_id) VALUES ('F10101', 'PIL20101');
+INSERT INTO pilot_schedule (flight_id, pilot_id) VALUES ('F10102', 'PIL20101');
+INSERT INTO pilot_schedule (flight_id, pilot_id) VALUES ('F10103', 'PIL20101');
+INSERT INTO pilot_schedule (flight_id, pilot_id) VALUES ('F10104', 'PIL20101');
+INSERT INTO pilot_schedule (flight_id, pilot_id) VALUES ('F10105', 'PIL20101');
+INSERT INTO pilot_schedule (flight_id, pilot_id) VALUES ('F10106', 'PIL20101');
+INSERT INTO pilot_schedule (flight_id, pilot_id) VALUES ('F10107', 'PIL20101');
+INSERT INTO pilot_schedule (flight_id, pilot_id) VALUES ('F10108', 'PIL20101');
+INSERT INTO pilot_schedule (flight_id, pilot_id) VALUES ('F10109', 'PIL20101');
+INSERT INTO pilot_schedule (flight_id, pilot_id) VALUES ('F10110', 'PIL20110');
+INSERT INTO pilot_schedule (flight_id, pilot_id) VALUES ('F10111', 'PIL20101');
+INSERT INTO pilot_schedule (flight_id, pilot_id) VALUES ('F10112', 'PIL20102');
+INSERT INTO pilot_schedule (flight_id, pilot_id) VALUES ('F10113', 'PIL20103');
+INSERT INTO pilot_schedule (flight_id, pilot_id) VALUES ('F10114', 'PIL20104');
+INSERT INTO pilot_schedule (flight_id, pilot_id) VALUES ('F10115', 'PIL20105');
+INSERT INTO pilot_schedule (flight_id, pilot_id) VALUES ('F10116', 'PIL20106');
+INSERT INTO pilot_schedule (flight_id, pilot_id) VALUES ('F10117', 'PIL20107');
+INSERT INTO pilot_schedule (flight_id, pilot_id) VALUES ('F10118', 'PIL20108');
+INSERT INTO pilot_schedule (flight_id, pilot_id) VALUES ('F10119', 'PIL20109');
+INSERT INTO pilot_schedule (flight_id, pilot_id) VALUES ('F10120', 'PIL20110');
+
+-- INSERT statements for crew_schedule
+INSERT INTO crew_schedule (flight_id, crew_id) VALUES ('F10101', 'CR30101');
+INSERT INTO crew_schedule (flight_id, crew_id) VALUES ('F10102', 'CR30101');
+INSERT INTO crew_schedule (flight_id, crew_id) VALUES ('F10103', 'CR30101');
+INSERT INTO crew_schedule (flight_id, crew_id) VALUES ('F10104', 'CR30101');
+INSERT INTO crew_schedule (flight_id, crew_id) VALUES ('F10105', 'CR30101');
+INSERT INTO crew_schedule (flight_id, crew_id) VALUES ('F10106', 'CR30101');
+INSERT INTO crew_schedule (flight_id, crew_id) VALUES ('F10107', 'CR30101');
+INSERT INTO crew_schedule (flight_id, crew_id) VALUES ('F10108', 'CR30101');
+INSERT INTO crew_schedule (flight_id, crew_id) VALUES ('F10109', 'CR30109');
+INSERT INTO crew_schedule (flight_id, crew_id) VALUES ('F10110', 'CR30110');
+INSERT INTO crew_schedule (flight_id, crew_id) VALUES ('F10111', 'CR30101');
+INSERT INTO crew_schedule (flight_id, crew_id) VALUES ('F10112', 'CR30102');
+INSERT INTO crew_schedule (flight_id, crew_id) VALUES ('F10113', 'CR30103');
+INSERT INTO crew_schedule (flight_id, crew_id) VALUES ('F10114', 'CR30104');
+INSERT INTO crew_schedule (flight_id, crew_id) VALUES ('F10115', 'CR30105');
+INSERT INTO crew_schedule (flight_id, crew_id) VALUES ('F10116', 'CR30106');
+INSERT INTO crew_schedule (flight_id, crew_id) VALUES ('F10117', 'CR30107');
+INSERT INTO crew_schedule (flight_id, crew_id) VALUES ('F10118', 'CR30108');
+INSERT INTO crew_schedule (flight_id, crew_id) VALUES ('F10119', 'CR30109');
+INSERT INTO crew_schedule (flight_id, crew_id) VALUES ('F10120', 'CR30110');
+
+
+-- INSERT statements for booking_seat
+INSERT INTO booking_seat (seat_id, booking_id) VALUES ('S101', 'B00101');
+INSERT INTO booking_seat (seat_id, booking_id) VALUES ('S102', 'B00102');
+INSERT INTO booking_seat (seat_id, booking_id) VALUES ('S103', 'B00103');
+INSERT INTO booking_seat (seat_id, booking_id) VALUES ('S104', 'B00104');
+INSERT INTO booking_seat (seat_id, booking_id) VALUES ('S105', 'B00105');
+INSERT INTO booking_seat (seat_id, booking_id) VALUES ('S106', 'B00106');
+INSERT INTO booking_seat (seat_id, booking_id) VALUES ('S107', 'B00107');
+INSERT INTO booking_seat (seat_id, booking_id) VALUES ('S108', 'B00108');
+INSERT INTO booking_seat (seat_id, booking_id) VALUES ('S109', 'B00109');
+INSERT INTO booking_seat (seat_id, booking_id) VALUES ('S110', 'B00110');
+INSERT INTO booking_seat (seat_id, booking_id) VALUES ('S101', 'B00111');
+INSERT INTO booking_seat (seat_id, booking_id) VALUES ('S102', 'B00112');
+INSERT INTO booking_seat (seat_id, booking_id) VALUES ('S103', 'B00113');
+INSERT INTO booking_seat (seat_id, booking_id) VALUES ('S104', 'B00114');
+INSERT INTO booking_seat (seat_id, booking_id) VALUES ('S105', 'B00115');
+INSERT INTO booking_seat (seat_id, booking_id) VALUES ('S106', 'B00116');
+INSERT INTO booking_seat (seat_id, booking_id) VALUES ('S107', 'B00117');
+INSERT INTO booking_seat (seat_id, booking_id) VALUES ('S108', 'B00118');
+INSERT INTO booking_seat (seat_id, booking_id) VALUES ('S109', 'B00119');
+INSERT INTO booking_seat (seat_id, booking_id) VALUES ('S110', 'B00120');
+INSERT INTO booking_seat (seat_id, booking_id) VALUES ('S101', 'B00121');
+INSERT INTO booking_seat (seat_id, booking_id) VALUES ('S102', 'B00122');
+INSERT INTO booking_seat (seat_id, booking_id) VALUES ('S103', 'B00123');
+INSERT INTO booking_seat (seat_id, booking_id) VALUES ('S104', 'B00124');
+INSERT INTO booking_seat (seat_id, booking_id) VALUES ('S105', 'B00125');
+INSERT INTO booking_seat (seat_id, booking_id) VALUES ('S106', 'B00126');
+INSERT INTO booking_seat (seat_id, booking_id) VALUES ('S107', 'B00127');
+INSERT INTO booking_seat (seat_id, booking_id) VALUES ('S108', 'B00128');
+INSERT INTO booking_seat (seat_id, booking_id) VALUES ('S109', 'B00129');
+INSERT INTO booking_seat (seat_id, booking_id) VALUES ('S110', 'B00130');
+INSERT INTO booking_seat (seat_id, booking_id) VALUES ('S101', 'B00130');
+INSERT INTO booking_seat (seat_id, booking_id) VALUES ('S102', 'B00129');
+INSERT INTO booking_seat (seat_id, booking_id) VALUES ('S103', 'B00128');
+INSERT INTO booking_seat (seat_id, booking_id) VALUES ('S104', 'B00127');
+INSERT INTO booking_seat (seat_id, booking_id) VALUES ('S105', 'B00126');
+INSERT INTO booking_seat (seat_id, booking_id) VALUES ('S106', 'B00125');
+INSERT INTO booking_seat (seat_id, booking_id) VALUES ('S107', 'B00124');
+INSERT INTO booking_seat (seat_id, booking_id) VALUES ('S108', 'B00123');
+INSERT INTO booking_seat (seat_id, booking_id) VALUES ('S109', 'B00122');
+INSERT INTO booking_seat (seat_id, booking_id) VALUES ('S110', 'B00121');
+
+-- INSERT statements for maintenance_schedule
+INSERT INTO maintenance_schedule (maintenance_id, aircraft_id, maintenance_date, type) VALUES ('M10101', 'A10101', TO_DATE('2024-04-01', 'YYYY-MM-DD'), 'Routine Check');
+INSERT INTO maintenance_schedule (maintenance_id, aircraft_id, maintenance_date, type) VALUES ('M10102', 'A10102', TO_DATE('2024-04-02', 'YYYY-MM-DD'), 'Engine Overhaul');
+INSERT INTO maintenance_schedule (maintenance_id, aircraft_id, maintenance_date, type) VALUES ('M10103', 'A10103', TO_DATE('2024-04-03', 'YYYY-MM-DD'), 'Avionics Inspection');
+INSERT INTO maintenance_schedule (maintenance_id, aircraft_id, maintenance_date, type) VALUES ('M10104', 'A10104', TO_DATE('2024-04-04', 'YYYY-MM-DD'), 'Hydraulic System Maintenance');
+INSERT INTO maintenance_schedule (maintenance_id, aircraft_id, maintenance_date, type) VALUES ('M10105', 'A10105', TO_DATE('2024-04-05', 'YYYY-MM-DD'), 'Routine Check');
+INSERT INTO maintenance_schedule (maintenance_id, aircraft_id, maintenance_date, type) VALUES ('M10106', 'A10106', TO_DATE('2024-04-06', 'YYYY-MM-DD'), 'Engine Overhaul');
+INSERT INTO maintenance_schedule (maintenance_id, aircraft_id, maintenance_date, type) VALUES ('M10107', 'A10107', TO_DATE('2024-04-07', 'YYYY-MM-DD'), 'Avionics Inspection');
+INSERT INTO maintenance_schedule (maintenance_id, aircraft_id, maintenance_date, type) VALUES ('M10108', 'A10108', TO_DATE('2024-04-08', 'YYYY-MM-DD'), 'Hydraulic System Maintenance');
+INSERT INTO maintenance_schedule (maintenance_id, aircraft_id, maintenance_date, type) VALUES ('M10109', 'A10109', TO_DATE('2024-04-09', 'YYYY-MM-DD'), 'Routine Check');
+INSERT INTO maintenance_schedule (maintenance_id, aircraft_id, maintenance_date, type) VALUES ('M10110', 'A10110', TO_DATE('2024-04-10', 'YYYY-MM-DD'), 'Engine Overhaul');
+INSERT INTO maintenance_schedule (maintenance_id, aircraft_id, maintenance_date, type) VALUES ('M10111', 'A10101', TO_DATE('2024-04-11', 'YYYY-MM-DD'), 'Avionics Inspection');
+INSERT INTO maintenance_schedule (maintenance_id, aircraft_id, maintenance_date, type) VALUES ('M10112', 'A10102', TO_DATE('2024-04-12', 'YYYY-MM-DD'), 'Hydraulic System Maintenance');
+INSERT INTO maintenance_schedule (maintenance_id, aircraft_id, maintenance_date, type) VALUES ('M10113', 'A10103', TO_DATE('2024-04-13', 'YYYY-MM-DD'), 'Routine Check');
+INSERT INTO maintenance_schedule (maintenance_id, aircraft_id, maintenance_date, type) VALUES ('M10114', 'A10104', TO_DATE('2024-04-14', 'YYYY-MM-DD'), 'Engine Overhaul');
+INSERT INTO maintenance_schedule (maintenance_id, aircraft_id, maintenance_date, type) VALUES ('M10115', 'A10105', TO_DATE('2024-04-15', 'YYYY-MM-DD'), 'Avionics Inspection');
+INSERT INTO maintenance_schedule (maintenance_id, aircraft_id, maintenance_date, type) VALUES ('M10116', 'A10106', TO_DATE('2024-04-16', 'YYYY-MM-DD'), 'Hydraulic System Maintenance');
+INSERT INTO maintenance_schedule (maintenance_id, aircraft_id, maintenance_date, type) VALUES ('M10117', 'A10101', TO_DATE('2024-04-17', 'YYYY-MM-DD'), 'Routine Check');
+INSERT INTO maintenance_schedule (maintenance_id, aircraft_id, maintenance_date, type) VALUES ('M10118', 'A10101', TO_DATE('2024-04-18', 'YYYY-MM-DD'), 'Engine Overhaul');
+INSERT INTO maintenance_schedule (maintenance_id, aircraft_id, maintenance_date, type) VALUES ('M10119', 'A10101', TO_DATE('2024-04-19', 'YYYY-MM-DD'), 'Avionics Inspection');
+INSERT INTO maintenance_schedule (maintenance_id, aircraft_id, maintenance_date, type) VALUES ('M10120', 'A10101', TO_DATE('2024-04-20', 'YYYY-MM-DD'), 'Hydraulic System Maintenance');

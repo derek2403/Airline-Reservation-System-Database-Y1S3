@@ -1,0 +1,151 @@
+CREATE TABLE customer (
+    customer_id VARCHAR(10),
+    first_name VARCHAR(15) NOT NULL,
+    last_name VARCHAR(15) NOT NULL,
+    gender CHAR(1) DEFAULT 'M',
+    phone_no VARCHAR(12),
+    address VARCHAR(35),
+    PRIMARY KEY (customer_id),
+    CONSTRAINT chk_customer_id CHECK (customer_id LIKE 'C%%%%%'),
+    CONSTRAINT chk_phone_no CHECK (
+        phone_no LIKE '01%%%%%%%%%' OR 
+        phone_no LIKE '01%%%%%%%%'
+    ),
+    CONSTRAINT chk_customer_gender CHECK (UPPER(gender) IN ('M', 'F'))
+);
+
+CREATE TABLE pilot (
+    pilot_id VARCHAR(10),
+    first_name VARCHAR(15) NOT NULL,
+    last_name VARCHAR(15) NOT NULL,
+    p_gender CHAR(1) DEFAULT 'M',
+    licenses VARCHAR(5),
+    p_salary INT NOT NULL,
+    p_rate INT NOT NULL,
+    PRIMARY KEY (pilot_id),
+    CONSTRAINT chk_pilot_id CHECK (pilot_id LIKE 'PIL%%%%%'),
+    CONSTRAINT chk_pilot_gender CHECK (UPPER(p_gender) IN ('M', 'F'))
+);
+
+CREATE TABLE crew_member (
+    crew_id VARCHAR(10),
+    first_name VARCHAR(10) NOT NULL,
+    last_name VARCHAR(10) NOT NULL,
+    role VARCHAR(15) NOT NULL,
+    c_gender CHAR(1) DEFAULT 'M',
+    c_salary INT NOT NULL,
+    c_rate INT NOT NULL,
+    PRIMARY KEY (crew_id),
+    CONSTRAINT chk_crew_id CHECK (crew_id LIKE 'CR%%%%%'),
+    CONSTRAINT chk_crew_gender CHECK (UPPER(c_gender) IN ('M', 'F'))
+);
+
+CREATE TABLE airport (
+    airport_id VARCHAR(10),
+    name VARCHAR(40) NOT NULL,
+    city VARCHAR(15) NOT NULL,
+    country VARCHAR(50) NOT NULL,
+    PRIMARY KEY (airport_id),
+    CONSTRAINT chk_airport_id CHECK (airport_id LIKE 'AIR%%%%%')
+);
+
+CREATE TABLE aircraft (
+    aircraft_id VARCHAR(10),
+    aircraft_name VARCHAR(15) NOT NULL,
+    model VARCHAR(15) NOT NULL,
+    capacity INT NOT NULL,
+    PRIMARY KEY (aircraft_id),
+    CONSTRAINT chk_aircraft_id CHECK (aircraft_id LIKE 'A%%%%%')
+);
+
+CREATE TABLE flight (
+    flight_id VARCHAR(10),
+    aircraft_id VARCHAR(10) NOT NULL,
+    departure_airport_id VARCHAR(10) NOT NULL,
+    departure_time DATE NOT NULL,
+    arrival_time DATE NOT NULL,
+    arrival_airport_id VARCHAR(10) NOT NULL,
+    PRIMARY KEY (flight_id),
+    FOREIGN KEY (aircraft_id) REFERENCES aircraft(aircraft_id),
+    FOREIGN KEY (departure_airport_id) REFERENCES airport(airport_id),
+    FOREIGN KEY (arrival_airport_id) REFERENCES airport(airport_id),
+    CONSTRAINT chk_flight_id CHECK (flight_id LIKE 'F%%%%%')
+);
+
+CREATE TABLE booking (
+    booking_id VARCHAR(10),
+    customer_id VARCHAR(10) NOT NULL,
+    booking_date DATE NOT NULL,
+    flight_id VARCHAR(10) NOT NULL,
+    PRIMARY KEY (booking_id),
+    FOREIGN KEY (customer_id) REFERENCES customer(customer_id),
+    FOREIGN KEY (flight_id) REFERENCES flight(flight_id),
+    CONSTRAINT chk_booking_id CHECK (booking_id LIKE 'B%%%%%')
+);
+
+CREATE TABLE payment (
+    payment_id VARCHAR(10),
+    booking_id VARCHAR(10) NOT NULL,
+    amount DECIMAL(10,2) NOT NULL,
+    PRIMARY KEY (payment_id),
+    FOREIGN KEY (booking_id) REFERENCES booking(booking_id),
+    CONSTRAINT chk_payment_id CHECK (payment_id LIKE 'P%%%%%')
+);
+
+CREATE TABLE refund (
+    refund_id VARCHAR(10),
+    customer_id VARCHAR(10) NOT NULL,
+    payment_id VARCHAR(10) NOT NULL,
+    booking_id VARCHAR(10) NOT NULL,
+    refund_amt DECIMAL(10,2) NOT NULL,
+    refund_date DATE NOT NULL,
+    PRIMARY KEY (refund_id),
+    FOREIGN KEY (customer_id) REFERENCES customer(customer_id),
+    FOREIGN KEY (payment_id) REFERENCES payment(payment_id),
+    FOREIGN KEY (booking_id) REFERENCES booking(booking_id),
+    CONSTRAINT chk_refund_id CHECK (refund_id LIKE 'R%%%%%')
+);
+
+CREATE TABLE seat (
+    seat_id VARCHAR(10),
+    aircraft_id VARCHAR(10) NOT NULL,
+    PRIMARY KEY (seat_id),
+    FOREIGN KEY (aircraft_id) REFERENCES aircraft(aircraft_id),
+    CONSTRAINT chk_seat_id CHECK (seat_id LIKE 'S%%%%%')
+);
+
+CREATE TABLE booking_seat (
+    seat_id VARCHAR(10),
+    booking_id VARCHAR(10),
+    PRIMARY KEY (seat_id, booking_id),
+    FOREIGN KEY (booking_id) REFERENCES booking(booking_id),
+    FOREIGN KEY (seat_id) REFERENCES seat(seat_id)
+);
+
+CREATE TABLE maintenance_schedule (
+    maintenance_id VARCHAR(10),
+    aircraft_id VARCHAR(10) NOT NULL,
+    maintenance_date DATE NOT NULL,
+    type VARCHAR(35) NOT NULL,
+    PRIMARY KEY (maintenance_id),
+    FOREIGN KEY (aircraft_id) REFERENCES aircraft(aircraft_id),
+    CONSTRAINT chk_maintenance_id CHECK (maintenance_id LIKE 'M%%%%%')
+);
+
+CREATE TABLE crew_schedule (
+    flight_id VARCHAR(10) NOT NULL,
+    crew_id VARCHAR(10) NOT NULL,
+    PRIMARY KEY (flight_id, crew_id),
+    FOREIGN KEY (flight_id) REFERENCES flight(flight_id),
+    FOREIGN KEY (crew_id) REFERENCES crew_member(crew_id)
+);
+
+CREATE TABLE pilot_schedule (
+    flight_id VARCHAR(10) NOT NULL,
+    pilot_id VARCHAR(10) NOT NULL,
+    PRIMARY KEY (flight_id, pilot_id),
+    FOREIGN KEY (flight_id) REFERENCES flight(flight_id),
+    FOREIGN KEY (pilot_id) REFERENCES pilot(pilot_id)
+);
+
+

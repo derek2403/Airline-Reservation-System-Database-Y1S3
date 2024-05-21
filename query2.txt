@@ -1,0 +1,34 @@
+ACCEPT gender CHAR PROMPT 'Enter Customer Gender (M/F): '
+ACCEPT min_payment_amount NUMBER FORMAT '999999.99' PROMPT 'Enter Minimum Payment Amount: '
+
+COLUMN customer_name FORMAT A30 HEADING 'Customer Name'
+COLUMN flight_details FORMAT A60 HEADING 'Flight Details'
+
+TTITLE 'Booking Details for &gender Customers with Payments over &min_payment_amount' SKIP 1
+
+SELECT c.first_name || ' ' || c.last_name AS customer_name,
+       a.aircraft_name || ' ' || a.model AS flight_details,
+       TO_CHAR(b.booking_date, 'DD-MON-YYYY') AS booking_date,
+       p.amount AS "Payment Amount"
+FROM booking b
+JOIN payment p ON b.booking_id = p.booking_id
+JOIN customer c ON b.customer_id = c.customer_id
+JOIN flight f ON b.flight_id = f.flight_id
+JOIN aircraft a ON f.aircraft_id = a.aircraft_id
+WHERE c.gender = '&gender'
+AND p.amount >= &min_payment_amount;
+
+-- New table to show customer name and number of bookings with payments over the min_payment_amount
+COLUMN customer_name2 FORMAT A30 HEADING 'Customer Name'
+COLUMN num_bookings FORMAT 9999 HEADING 'Number of Bookings'
+
+TTITLE 'Customer Summary for &gender Customers with Payments over &min_payment_amount' SKIP 1
+
+SELECT c.first_name || ' ' || c.last_name AS customer_name2,
+       COUNT(*) AS num_bookings
+FROM booking b
+JOIN payment p ON b.booking_id = p.booking_id
+JOIN customer c ON b.customer_id = c.customer_id
+WHERE c.gender = '&gender'
+AND p.amount >= &min_payment_amount
+GROUP BY c.first_name, c.last_name;

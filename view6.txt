@@ -1,0 +1,11 @@
+CREATE VIEW crew_schedule_view AS
+SELECT 
+    cs.flight_id,
+    cm.crew_id,
+    cm.first_name || ' ' || cm.last_name AS crew_name,
+    cm.role AS crew_role,
+    cm.c_gender AS G
+FROM crew_schedule cs
+JOIN crew_member cm ON cs.crew_id = cm.crew_id;
+TTITLE OFF
+SELECT * FROM crew_schedule_view;

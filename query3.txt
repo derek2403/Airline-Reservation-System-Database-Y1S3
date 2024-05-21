@@ -1,0 +1,28 @@
+ACCEPT flight_date PROMPT 'Enter Flight Date (YYYY-MM-DD): '
+
+COLUMN flight_id FORMAT A10 HEADING 'Flight ID'
+COLUMN departure_airport FORMAT A40 HEADING 'Departure Airport'
+COLUMN departure_time FORMAT A20 HEADING 'Departure Time'
+COLUMN arrival_airport FORMAT A40 HEADING 'Arrival Airport'
+COLUMN arrival_time FORMAT A20 HEADING 'Arrival Time'
+
+TTITLE CENTER 'Flight Details for &flight_date' SKIP 1
+
+SELECT 
+    f.flight_id,
+    d.name AS departure_airport,
+    TO_CHAR(f.departure_time, 'YYYY-MM-DD HH24:MI:SS') AS departure_time,
+    a.name AS arrival_airport,
+    TO_CHAR(f.arrival_time, 'YYYY-MM-DD HH24:MI:SS') AS arrival_time
+FROM flight f
+JOIN airport d ON f.departure_airport_id = d.airport_id
+JOIN airport a ON f.arrival_airport_id = a.airport_id
+WHERE TRUNC(f.departure_time) = TO_DATE('&flight_date', 'YYYY-MM-DD');
+
+SELECT 
+    COUNT(booking.booking_id) AS "Total Bookings",
+    SUM(payment.amount) AS "Total Revenue($)"
+FROM booking
+JOIN payment ON booking.booking_id = payment.booking_id
+WHERE TRUNC(booking.booking_date) = TO_DATE('&flight_date', 'YYYY-MM-DD');
+

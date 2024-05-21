@@ -1,0 +1,14 @@
+DROP TABLE booking_seat;
+DROP TABLE refund;
+DROP TABLE payment;
+DROP TABLE booking;
+DROP TABLE pilot_schedule;
+DROP TABLE crew_schedule;
+DROP TABLE maintenance_schedule;
+DROP TABLE seat;
+DROP TABLE flight;
+DROP TABLE aircraft;
+DROP TABLE airport;
+DROP TABLE crew_member;
+DROP TABLE pilot;
+DROP TABLE customer;

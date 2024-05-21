@@ -1,0 +1,22 @@
+ACCEPT aircraft_choice CHAR PROMPT 'Enter Aircraft ID or * to view all: '
+
+COLUMN flight_id FORMAT A10 HEADING 'Flight ID'
+COLUMN aircraft_name FORMAT A20 HEADING 'Aircraft Name'
+COLUMN model FORMAT A15 HEADING 'Aircraft Model'
+COLUMN capacity FORMAT 9999 HEADING 'Capacity'
+COLUMN total_bookings FORMAT 9999 HEADING 'Total Bookings'
+COLUMN available_seats FORMAT 9999 HEADING 'Available Seats'
+
+TTITLE CENTER 'Flight Details with Aircraft, Total Bookings, and Available Seats' SKIP 1
+
+SELECT f.flight_id,
+       a.aircraft_name,
+       a.model,
+       a.capacity,
+       COUNT(b.booking_id) AS total_bookings,
+       (a.capacity - COUNT(b.booking_id)) AS available_seats
+FROM flight f
+JOIN aircraft a ON f.aircraft_id = a.aircraft_id
+LEFT JOIN booking b ON f.flight_id = b.flight_id
+WHERE '&aircraft_choice' = '*' OR a.aircraft_id = '&aircraft_choice'
+GROUP BY f.flight_id, a.aircraft_name, a.model, a.capacity;

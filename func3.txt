@@ -1,0 +1,10 @@
+ACCEPT pilot_id CHAR PROMPT 'Enter Pilot ID: '
+
+SELECT
+    p.pilot_id,
+    p.p_rate AS current_rate,
+    p.p_rate * 1.5 AS next_incentive
+FROM
+    pilot p
+WHERE
+    p.pilot_id = '&pilot_id';

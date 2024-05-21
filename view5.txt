@@ -1,0 +1,10 @@
+CREATE VIEW pilot_schedule_view AS
+SELECT 
+    ps.flight_id,
+    p.pilot_id,
+    p.first_name || ' ' || p.last_name AS pilot_name,
+    p.p_gender AS G
+FROM pilot_schedule ps
+JOIN pilot p ON ps.pilot_id = p.pilot_id;
+TTITLE OFF
+SELECT * FROM pilot_schedule_view;

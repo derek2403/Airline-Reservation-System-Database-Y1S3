@@ -1,0 +1,25 @@
+ACCEPT start_date PROMPT 'Enter Start Date for Maintenance (YYYY-MM-DD): '
+ACCEPT end_date PROMPT 'Enter End Date for Maintenance (YYYY-MM-DD): '
+ACCEPT aircraft_id PROMPT 'Enter Aircraft ID: '
+
+COLUMN maint_id FORMAT A15 HEADING 'Maintenance ID'
+COLUMN aircraft_id FORMAT A15 HEADING 'Aircraft ID'
+COLUMN maint_date FORMAT A16 HEADING 'Maintenance Date'
+COLUMN maint_type FORMAT A30 HEADING 'Maintenance Type'
+COLUMN total_flights_before FORMAT 9999 HEADING 'Flights Before Maintenance'
+COLUMN total_flights_during FORMAT 9999 HEADING 'Flights During Maintenance'
+
+TTITLE CENTER 'Maintenance Schedule with Flight Details' SKIP 1
+
+SELECT ms.maintenance_id AS maint_id,
+       ms.aircraft_id AS aircraft_id,
+       ms.maintenance_date AS maint_date,
+       ms.type AS maint_type,
+       COUNT(CASE WHEN f.departure_time < TO_DATE('&start_date', 'YYYY-MM-DD') THEN f.flight_id END) AS total_flights_before,
+       COUNT(CASE WHEN f.departure_time BETWEEN TO_DATE('&start_date', 'YYYY-MM-DD') AND TO_DATE('&end_date', 'YYYY-MM-DD') THEN f.flight_id END) AS total_flights_during
+FROM maintenance_schedule ms
+JOIN aircraft a ON ms.aircraft_id = a.aircraft_id
+LEFT JOIN flight f ON a.aircraft_id = f.aircraft_id
+WHERE ms.aircraft_id = '&aircraft_id'
+AND ms.maintenance_date BETWEEN TO_DATE('&start_date', 'YYYY-MM-DD') AND TO_DATE('&end_date', 'YYYY-MM-DD')
+GROUP BY ms.maintenance_id, ms.aircraft_id, ms.maintenance_date, ms.type;

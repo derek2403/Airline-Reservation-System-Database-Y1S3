@@ -1,0 +1,20 @@
+ACCEPT start_date PROMPT 'Enter Start Date (YYYY-MM-DD): '
+ACCEPT end_date PROMPT 'Enter End Date (YYYY-MM-DD): '
+
+COLUMN flight_id FORMAT A10 HEADING 'Flight ID'
+COLUMN departure_airport FORMAT A45 HEADING 'Departure Airport'
+COLUMN arrival_airport FORMAT A45 HEADING 'Arrival Airport'
+COLUMN total_crew FORMAT 9999 HEADING 'Total Crew'
+
+TTITLE CENTER 'Flights with Departure and Arrival Airport Details and Total Crew' SKIP 1
+
+SELECT f.flight_id,
+       da.name AS departure_airport,
+       aa.name AS arrival_airport,
+       COUNT(cs.crew_id) AS total_crew
+FROM flight f
+JOIN airport da ON f.departure_airport_id = da.airport_id
+JOIN airport aa ON f.arrival_airport_id = aa.airport_id
+LEFT JOIN crew_schedule cs ON f.flight_id = cs.flight_id
+WHERE f.departure_time BETWEEN TO_DATE('&start_date', 'YYYY-MM-DD') AND TO_DATE('&end_date', 'YYYY-MM-DD')
+GROUP BY f.flight_id, da.name, aa.name;

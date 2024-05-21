@@ -1,0 +1,18 @@
+ACCEPT booking_id CHAR PROMPT 'Enter Booking ID: '
+
+SELECT
+    b.booking_id,
+    CASE
+        WHEN b.booking_date <= f.departure_time - INTERVAL '2' DAY THEN
+            p.amount * 0.3
+        ELSE
+            0
+    END AS refund_amount
+FROM
+    booking b
+JOIN
+    flight f ON b.flight_id = f.flight_id
+JOIN
+    payment p ON b.booking_id = p.booking_id
+WHERE
+    b.booking_id = '&booking_id';

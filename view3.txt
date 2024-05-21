@@ -1,0 +1,11 @@
+CREATE VIEW maintenance_schedule_view AS
+SELECT 
+    m.maintenance_id,
+    a.aircraft_id,
+    a.aircraft_name,
+    m.maintenance_date AS "Date",
+    m.type
+FROM aircraft a
+JOIN maintenance_schedule m ON a.aircraft_id = m.aircraft_id;
+TTITLE OFF
+SELECT * FROM maintenance_schedule_view;
